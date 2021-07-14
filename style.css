@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+}
+
+header{
+    width: 100vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(32, 51, 45);
+    text-transform: uppercase;
+}
+
+main{
+    box-sizing: content-box;
+    position: relative;
+    width: 100vw;
+    height: 90vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid rgb(3, 66, 109);
+    border-bottom: 4px solid rgb(3, 66, 109);
+    background: rgb(29, 43, 43);
+
+}
+
+.fullscreen{
+    position: absolute;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    right: 50px;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    background: center / contain no-repeat url(assets/more.svg);
+    transition: linear .3s;
+}
+
+.white{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.black{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 3;
+}
+
+.button{
+    box-sizing: content-box;
+    margin: 5px;
+    width: 50px;
+    height: 200px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius:8px;
+    background: floralwhite;
+    transition: linear .3s;
+}
+
+.button.black {
+    top: 5px;
+    margin: 0;
+    height: 140px;
+    background:rgb(29, 43, 43);
+    z-index: 10;
+    transition: linear .3s;
+}
+
+.button::before{
+    content: attr(data-note);
+    position: absolute;
+    bottom: -2rem;
+    color: rgb(5, 183, 189);
+    
+}
+
+.button.black::before{
+    position: absolute;
+    bottom: 10rem;
+    color: rgb(5, 183, 189);
+}
+
+.button.change::before{
+    content: attr(data-letters);
+    position: absolute;
+    bottom: -2rem;
+    color: rgb(5, 183, 189);
+    
+}
+
+.button.black.change::before{
+    position: absolute;
+    bottom: 10rem;
+    color: rgb(42, 131, 134);
+}
+
+.button.black:nth-child(1){
+    left:35px
+}
+.button.black:nth-child(2){
+    left:95px
+}
+.button.black:nth-child(3){
+    left:215px
+}
+.button.black:nth-child(4){
+    left:275px
+}
+.button.black:nth-child(5){
+    left:335px
+}
+
+.notes{
+    margin-bottom: 50px;
+    margin-right: 20px;
+    padding: 10px 30px 10px 30px;
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    color:rgb(16, 24, 24);
+    border: none;
+    border-radius: 5px;
+    transition: linear .3s;
+} 
+
+.letters{
+    padding: 10px 30px 10px 30px;
+    font-family: 'Cormorant Unicase', serif;
+    font-size: 20px;
+    background: rgb(255, 255, 255);
+    color: rgb(16, 24, 24);
+    border: none;
+    border-radius: 5px;
+    transition: linear .3s;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: rgb(194, 191, 191);
+    
+}
+
+.button:hover::before{
+    cursor: pointer;
+    color: rgb(194, 191, 191);
+}
+
+.button.change:hover::before{
+    cursor: pointer;
+    color: rgb(194, 191, 191);
+}
+
+.button:active::before{
+    cursor: pointer;
+    color: rgb(134, 37, 37);
+}
+
+.button.black:hover{
+    background-color: rgb(19, 19, 19);
+}
+
+button:hover{
+    cursor: pointer;
+    background: rgb(172, 172, 172);
+}
+
+button:focus{
+    outline: none;
+}
+
+.fullscreen:hover{
+    cursor: pointer;
+    opacity: 50%;
+}
+
+.fullscreen.used{
+    border: 2px solid black;
+    background: center / contain no-repeat url(assets/lees.svg);
+}
+
